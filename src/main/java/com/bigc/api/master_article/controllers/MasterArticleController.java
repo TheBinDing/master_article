@@ -1,5 +1,4 @@
-package com.gold.master_article.controller;
-
+package com.bigc.api.master_article.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -8,17 +7,17 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.gold.master_article.oracle.service.MasterService;
+import com.bigc.api.master_article.services.MasterArticleService;
 
 @CrossOrigin
 @RestController
-@RequestMapping("/Master")
-public class MasterController {
+@RequestMapping("/master_article")
+public class MasterArticleController {
     @Autowired
-    MasterService masterService;
+    private MasterArticleService masterArticleService;
 
     @GetMapping("/getData")
-    public ResponseEntity<Object> getData(){
-        return masterService.getData();
+    public ResponseEntity<Object> getData() {
+        return masterArticleService.getData();
     }
 }
