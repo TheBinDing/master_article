@@ -1,4 +1,4 @@
-package com.bigc.api.master_article.config;
+package th.com.bigc.api.master_article.config;
 
 import javax.sql.DataSource;
 
@@ -8,6 +8,7 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.boot.orm.jpa.EntityManagerFactoryBuilder;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Primary;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.orm.jpa.JpaTransactionManager;
 import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
@@ -17,30 +18,33 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 import jakarta.persistence.EntityManagerFactory;
 
 @Configuration
-@EnableJpaRepositories(entityManagerFactoryRef = "postgresEntityManagerFactory", transactionManagerRef = "postgresTransactionManager", basePackages = {
-        "com.bigc.api.master_article" })
 @EnableTransactionManagement
+@EnableJpaRepositories(entityManagerFactoryRef = "postgresEntityManagerFactory", transactionManagerRef = "postgresEntityManagerFactory", basePackages = {
+        "th.com.bigc.api.master_article.postgres" })
 public class PostgresDatasourceConfiguration {
-
+    @Primary
     @Bean
-    @ConfigurationProperties("spring.datasource.postgres")
-    public DataSourceProperties postgreDataSourceProperties() {
+    @ConfigurationProperties("spring.datasource.hikari.postgres")
+    public DataSourceProperties postgresDataSourceProperties() {
         return new DataSourceProperties();
     }
 
+    @Primary
     @Bean
     public DataSource postgresDataSource() {
-        return postgreDataSourceProperties().initializeDataSourceBuilder().build();
+        return postgresDataSourceProperties().initializeDataSourceBuilder().build();
     }
 
+    @Primary
     @Bean(name = "postgresEntityManagerFactory")
     public LocalContainerEntityManagerFactoryBean postgresEntityManagerFactory(
             @Qualifier("postgresDataSource") DataSource postgresDataSource, EntityManagerFactoryBuilder builder) {
 
         return builder.dataSource(postgresDataSource)
-                .packages("com.bigc.api.master_article").build();
+                .packages("th.com.bigc.api.master_article.postgres").persistenceUnit("postgres").build();
     }
 
+    @Primary
     @Bean
     public PlatformTransactionManager postgresTransactionManager(
             @Qualifier("postgresEntityManagerFactory") EntityManagerFactory factory) {
