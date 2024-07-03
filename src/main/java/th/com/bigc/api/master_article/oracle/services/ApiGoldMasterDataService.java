@@ -26,13 +26,13 @@ public class ApiGoldMasterDataService {
     @Autowired
     private RecipeRepository recipeRepository;
 
-    public ResponseEntity<Object> getArticleMaster(ArticleMaster articleMaster) {
+    public ResponseEntity<Object> getArticleMaster(String division_code) {
         List<MasterArticleModel> data = null;
         try {
-            if (articleMaster.getDivision_code().equals("ALL")) {
+            if (division_code.equals("ALL")) {
                 data = masterArticleRepository.getArticleMaster();
             } else {
-                data = masterArticleRepository.getArticleMasterByCode(articleMaster.getDivision_code());
+                data = masterArticleRepository.getArticleMasterByCode(division_code);
             }
             return new ResponseEntity<Object>(data, HttpStatus.OK);
         } catch (Exception e) {
@@ -40,13 +40,13 @@ public class ApiGoldMasterDataService {
         }
     }
 
-    public ResponseEntity<Object> getRecipe(ArticleMaster articleMaster) {
+    public ResponseEntity<Object> getRecipe(String division_code) {
         List<RecipeModel> data = null;
         try {
-            if (articleMaster.getDivision_code().equals("ALL")) {
+            if (division_code.equals("ALL")) {
                 data = recipeRepository.getRecipe();
             } else {
-                data = recipeRepository.getRecipeByCode(articleMaster.getDivision_code());
+                data = recipeRepository.getRecipeByCode(division_code);
             }
             return new ResponseEntity<Object>(data, HttpStatus.OK);
         } catch (Exception e) {
