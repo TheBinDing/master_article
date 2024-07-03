@@ -29,7 +29,7 @@ public class ApiGoldMasterDataService {
     public ResponseEntity<Object> getArticleMaster(ArticleMaster articleMaster) {
         List<MasterArticleModel> data = null;
         try {
-            if (!articleMaster.getDivision_code().equals("ALL")) {
+            if (articleMaster.getDivision_code().equals("ALL")) {
                 data = masterArticleRepository.getArticleMaster();
             } else {
                 data = masterArticleRepository.getArticleMasterByCode(articleMaster.getDivision_code());
@@ -43,7 +43,7 @@ public class ApiGoldMasterDataService {
     public ResponseEntity<Object> getRecipe(ArticleMaster articleMaster) {
         List<RecipeModel> data = null;
         try {
-            if (!articleMaster.getDivision_code().equals("ALL")) {
+            if (articleMaster.getDivision_code().equals("ALL")) {
                 data = recipeRepository.getRecipe();
             } else {
                 data = recipeRepository.getRecipeByCode(articleMaster.getDivision_code());
