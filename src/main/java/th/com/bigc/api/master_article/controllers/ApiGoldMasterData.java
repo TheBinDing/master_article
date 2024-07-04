@@ -18,12 +18,12 @@ public class ApiGoldMasterData {
     private ApiGoldMasterDataService apiGoldMasterDataService;
 
     @GetMapping("/getArticleMaster")
-    public ResponseEntity<Object> getArticleMaster(@RequestParam String division_code) {
+    public ResponseEntity<Object> getArticleMaster(@RequestParam(name = "division_code", required = false, defaultValue = "ALL") String division_code) {
         return apiGoldMasterDataService.getArticleMaster(division_code);
     }
 
     @GetMapping("/getRecipe")
-    public ResponseEntity<Object> getRecipe(@RequestParam String division_code) {
+    public ResponseEntity<Object> getRecipe(@RequestParam(name = "division_code", required = false, defaultValue = "ALL") String division_code) {
         return apiGoldMasterDataService.getRecipe(division_code);
     }
 }
