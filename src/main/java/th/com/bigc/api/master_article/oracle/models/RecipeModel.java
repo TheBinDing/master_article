@@ -10,58 +10,57 @@ import jakarta.persistence.Table;
 public class RecipeModel {
     @Id
     @Column(name = "article_code")
-    private String articleCode;
+    private String article_code;
 
     @Column(name = "bar_code")
-    private String barCode;
+    private String bar_code;
 
     @Column(name = "sale_unit")
-    private String saleUnit;
+    private String sale_unit;
 
     @Column(name = "qty_coef")
-    private int qtyCoef;
+    private String qty_coef;
 
     @Column(name = "bar_code_recipe_spack")
-    private String barCodeRecipeSpack;
+    private String bar_code_recipe_spack;
 
-    public String getArticleCode() {
-        return articleCode;
+    public String getArticle_code() {
+        return article_code;
     }
 
-    public void setArticleCode(String articleCode) {
-        this.articleCode = articleCode;
+    public void setArticle_code(String article_code) {
+        this.article_code = article_code;
     }
 
-    public String getBarCode() {
-        return barCode;
+    public String getBar_code() {
+        return bar_code;
     }
 
-    public void setBarCode(String barCode) {
-        this.barCode = barCode;
+    public void setBar_code(String bar_code) {
+        this.bar_code = bar_code;
     }
 
-    public String getSaleUnit() {
-        return saleUnit;
+    public String getSale_unit() {
+        return sale_unit;
     }
 
-    public void setSaleUnit(String saleUnit) {
-        this.saleUnit = saleUnit;
+    public void setSale_unit(String sale_unit) {
+        this.sale_unit = sale_unit;
     }
 
-    public int getQtyCoef() {
-        return qtyCoef;
+    public String getQty_coef() {
+        return qty_coef;
     }
 
-    public void setQtyCoef(int qtyCoef) {
-        this.qtyCoef = qtyCoef;
+    public void setQty_coef(String qty_coef) {
+        this.qty_coef = qty_coef;
     }
 
-    public String getBarCodeRecipeSpack() {
-        return barCodeRecipeSpack;
+    public String getBar_code_recipe_spack() {
+        return bar_code_recipe_spack;
     }
 
-    public void setBarCodeRecipeSpack(String barCodeRecipeSpack) {
-        this.barCodeRecipeSpack = barCodeRecipeSpack;
+    public void setBar_code_recipe_spack(String bar_code_recipe_spack) {
+        this.bar_code_recipe_spack = bar_code_recipe_spack;
     }
-
 }

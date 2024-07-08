@@ -10,49 +10,49 @@ import jakarta.persistence.Table;
 public class MasterArticleModel {
     @Id
     @Column(name = "division_code")
-    private String divisionCode;
+    private String division_code;
 
     @Column(name = "division_name")
-    private String divisionName;
+    private String division_name;
 
     @Column(name = "department_code")
-    private String departmentCode;
+    private String department_code;
 
     @Column(name = "department_name")
-    private String departmentName;
+    private String department_name;
 
     @Column(name = "sub_department_code")
-    private String subDepartmentCode;
+    private String sub_department_code;
 
     @Column(name = "sub_department_name")
-    private String subDepartmentName;
+    private String sub_department_name;
 
     @Column(name = "class_code")
-    private String classCode;
+    private String class_code;
 
     @Column(name = "class_name")
-    private String className;
+    private String class_name;
 
     @Column(name = "sub_class_code")
-    private String subClassCode;
+    private String sub_class_code;
 
     @Column(name = "sub_class_name")
-    private String subClassName;
+    private String sub_class_name;
 
     @Column(name = "article_code")
-    private String articleCode;
+    private String article_code;
 
     @Column(name = "bar_code")
-    private String barCode;
+    private String bar_code;
 
     @Column(name = "product_name_th")
-    private String productNameTh;
+    private String product_name_th;
 
     @Column(name = "product_name_en")
-    private String productNameEn;
+    private String product_name_en;
 
     @Column(name = "sale_unit")
-    private String saleUnit;
+    private String sale_unit;
 
     @Column(name = "model")
     private String model;
@@ -61,132 +61,132 @@ public class MasterArticleModel {
     private String brand;
 
     @Column(name = "sv_status")
-    private String svStatus;
+    private String sv_status;
 
     @Column(name = "lv_status")
-    private String lvStatus;
+    private String lv_status;
 
     @Column(name = "flag_print")
-    private String flagPrint;
+    private String flag_print;
 
-    public String getDivisionCode() {
-        return divisionCode;
+    public String getDivision_code() {
+        return division_code;
     }
 
-    public void setDivisionCode(String divisionCode) {
-        this.divisionCode = divisionCode;
+    public void setDivision_code(String division_code) {
+        this.division_code = division_code;
     }
 
-    public String getDivisionName() {
-        return divisionName;
+    public String getDivision_name() {
+        return division_name;
     }
 
-    public void setDivisionName(String divisionName) {
-        this.divisionName = divisionName;
+    public void setDivision_name(String division_name) {
+        this.division_name = division_name;
     }
 
-    public String getDepartmentCode() {
-        return departmentCode;
+    public String getDepartment_code() {
+        return department_code;
     }
 
-    public void setDepartmentCode(String departmentCode) {
-        this.departmentCode = departmentCode;
+    public void setDepartment_code(String department_code) {
+        this.department_code = department_code;
     }
 
-    public String getDepartmentName() {
-        return departmentName;
+    public String getDepartment_name() {
+        return department_name;
     }
 
-    public void setDepartmentName(String departmentName) {
-        this.departmentName = departmentName;
+    public void setDepartment_name(String department_name) {
+        this.department_name = department_name;
     }
 
-    public String getSubDepartmentCode() {
-        return subDepartmentCode;
+    public String getSub_department_code() {
+        return sub_department_code;
     }
 
-    public void setSubDepartmentCode(String subDepartmentCode) {
-        this.subDepartmentCode = subDepartmentCode;
+    public void setSub_department_code(String sub_department_code) {
+        this.sub_department_code = sub_department_code;
     }
 
-    public String getSubDepartmentName() {
-        return subDepartmentName;
+    public String getSub_department_name() {
+        return sub_department_name;
     }
 
-    public void setSubDepartmentName(String subDepartmentName) {
-        this.subDepartmentName = subDepartmentName;
+    public void setSub_department_name(String sub_department_name) {
+        this.sub_department_name = sub_department_name;
     }
 
-    public String getClassCode() {
-        return classCode;
+    public String getClass_code() {
+        return class_code;
     }
 
-    public void setClassCode(String classCode) {
-        this.classCode = classCode;
+    public void setClass_code(String class_code) {
+        this.class_code = class_code;
     }
 
-    public String getClassName() {
-        return className;
+    public String getClass_name() {
+        return class_name;
     }
 
-    public void setClassName(String className) {
-        this.className = className;
+    public void setClass_name(String class_name) {
+        this.class_name = class_name;
     }
 
-    public String getSubClassCode() {
-        return subClassCode;
+    public String getSub_class_code() {
+        return sub_class_code;
     }
 
-    public void setSubClassCode(String subClassCode) {
-        this.subClassCode = subClassCode;
+    public void setSub_class_code(String sub_class_code) {
+        this.sub_class_code = sub_class_code;
     }
 
-    public String getSubClassName() {
-        return subClassName;
+    public String getSub_class_name() {
+        return sub_class_name;
     }
 
-    public void setSubClassName(String subClassName) {
-        this.subClassName = subClassName;
+    public void setSub_class_name(String sub_class_name) {
+        this.sub_class_name = sub_class_name;
     }
 
-    public String getArticleCode() {
-        return articleCode;
+    public String getArticle_code() {
+        return article_code;
     }
 
-    public void setArticleCode(String articleCode) {
-        this.articleCode = articleCode;
+    public void setArticle_code(String article_code) {
+        this.article_code = article_code;
     }
 
-    public String getBarCode() {
-        return barCode;
+    public String getBar_code() {
+        return bar_code;
     }
 
-    public void setBarCode(String barCode) {
-        this.barCode = barCode;
+    public void setBar_code(String bar_code) {
+        this.bar_code = bar_code;
     }
 
-    public String getProductNameTh() {
-        return productNameTh;
+    public String getProduct_name_th() {
+        return product_name_th;
     }
 
-    public void setProductNameTh(String productNameTh) {
-        this.productNameTh = productNameTh;
+    public void setProduct_name_th(String product_name_th) {
+        this.product_name_th = product_name_th;
     }
 
-    public String getProductNameEn() {
-        return productNameEn;
+    public String getProduct_name_en() {
+        return product_name_en;
     }
 
-    public void setProductNameEn(String productNameEn) {
-        this.productNameEn = productNameEn;
+    public void setProduct_name_en(String product_name_en) {
+        this.product_name_en = product_name_en;
     }
 
-    public String getSaleUnit() {
-        return saleUnit;
+    public String getSale_unit() {
+        return sale_unit;
     }
 
-    public void setSaleUnit(String saleUnit) {
-        this.saleUnit = saleUnit;
+    public void setSale_unit(String sale_unit) {
+        this.sale_unit = sale_unit;
     }
 
     public String getModel() {
@@ -205,27 +205,27 @@ public class MasterArticleModel {
         this.brand = brand;
     }
 
-    public String getSvStatus() {
-        return svStatus;
+    public String getSv_status() {
+        return sv_status;
     }
 
-    public void setSvStatus(String svStatus) {
-        this.svStatus = svStatus;
+    public void setSv_status(String sv_status) {
+        this.sv_status = sv_status;
     }
 
-    public String getLvStatus() {
-        return lvStatus;
+    public String getLv_status() {
+        return lv_status;
     }
 
-    public void setLvStatus(String lvStatus) {
-        this.lvStatus = lvStatus;
+    public void setLv_status(String lv_status) {
+        this.lv_status = lv_status;
     }
 
-    public String getFlagPrint() {
-        return flagPrint;
+    public String getFlag_print() {
+        return flag_print;
     }
 
-    public void setFlagPrint(String flagPrint) {
-        this.flagPrint = flagPrint;
+    public void setFlag_print(String flag_print) {
+        this.flag_print = flag_print;
     }
 }

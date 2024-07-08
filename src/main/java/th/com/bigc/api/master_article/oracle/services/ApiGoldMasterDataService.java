@@ -9,7 +9,6 @@ import org.springframework.stereotype.Service;
 
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
-import th.com.bigc.api.master_article.models.ArticleMaster;
 import th.com.bigc.api.master_article.oracle.models.MasterArticleModel;
 import th.com.bigc.api.master_article.oracle.models.RecipeModel;
 import th.com.bigc.api.master_article.oracle.repositories.MasterArticleRepository;
