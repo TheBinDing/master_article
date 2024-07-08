@@ -3,10 +3,14 @@ package th.com.bigc.api.master_article.oracle.models;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.IdClass;
 import jakarta.persistence.Table;
+import jakarta.persistence.UniqueConstraint;
+import th.com.bigc.api.master_article.oracle.models.id.MasterArticleModelId;
 
 @Entity
-@Table(name = "bgc_master_article")
+@Table(name = "bgc_master_article", uniqueConstraints = @UniqueConstraint(columnNames = { "division_code", "bar_code", "product_name_th" }))
+@IdClass(MasterArticleModelId.class)
 public class MasterArticleModel {
     @Id
     @Column(name = "division_code")
@@ -42,9 +46,11 @@ public class MasterArticleModel {
     @Column(name = "article_code")
     private String article_code;
 
+    @Id
     @Column(name = "bar_code")
     private String bar_code;
 
+    @Id
     @Column(name = "product_name_th")
     private String product_name_th;
 

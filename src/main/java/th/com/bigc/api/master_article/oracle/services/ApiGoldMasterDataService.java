@@ -27,12 +27,14 @@ public class ApiGoldMasterDataService {
 
     public ResponseEntity<Object> getArticleMaster(String division_code) {
         List<MasterArticleModel> data = null;
+        
         try {
             if (division_code.equals("ALL")) {
                 data = masterArticleRepository.getArticleMaster();
             } else {
                 data = masterArticleRepository.getArticleMasterByCode(division_code);
             }
+
             return new ResponseEntity<Object>(data, HttpStatus.OK);
         } catch (Exception e) {
             return new ResponseEntity<Object>(e.getMessage(), HttpStatus.BAD_GATEWAY);
